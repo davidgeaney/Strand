@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(40px) scaleX(0.7);
+    border-radius: 25px;
+}
+
+header.scrolled {
+    transform: translateY(0) scaleX(1);
+    border-radius: 0;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: #FFDA00;
+    margin-left: 36px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header-button {
+    padding: 20px 45px;
+    background-color: #FFDA00;
+    font-size: 22px;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header-button:hover {
+    background-color: #0025ff;
+    color: #ffffff;
+}
+.cta-button-1 {
+    padding: 15px 35px;
+    background-color: #FFDA00;
+    font-size: 22px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 40px;
+}
+.cta-button-1:hover {
+    background-color: #ffffff;
+    color: #FFDA00;
+}
+
+.cta-button-2 {
+    padding: 15px 35px;
+    background-color: transparent;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 40px;
+    transition: 0.3s;
+}
+.cta-button-2:hover {
+    background-color: #ffffff;
+    color: #FFDA00;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 200px; /* Increased padding to move the hero section down */
+    background-image: url(images/Untitled\ design\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-image img{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 1080px;
+    height: 580px;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+.hero-content {
+    max-width: 60%;
+    margin-left: 20%; /* Align with the left side of the logo */
+    text-align: left;
+    padding: 40px 0;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 6rem; /* Make the heading the biggest */
+    margin-bottom: 30px; /* Add spacing below the heading */
+    font-weight: 600;
+}
+
+.hero-content span {
+    font-size: 1.5rem; /* Keep paragraphs equal size */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    max-width: 40%;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.8rem; /* Keep paragraphs equal size */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    max-width: 40%;
+    font-weight: 500;
+}
+
+.hero-content .btn-container {
+    margin-top: 30px; /* Add spacing above the buttons */
+}
+
+/* Services Section */
+
+.services {
+    text-align: center;
+}
+
+.services-content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.services-content span,
+.services-content h2,
+.services-content p {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.services-content span {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #8a8a8a;
+}
+
+.services-content h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.services-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+/* Services Cards */
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px 40px; /* Increased vertical gap to 100px */
+    padding: 60px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.services-card {
+    background-color: #f3f3f32c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 80px 30px 30px; /* Adjusted padding to accommodate icon */
+    width: calc(33.33% - 27px);
+    height: calc(33.33vw - 27px); /* Make height equal to width for square shape */
+    max-height: 400px; /* Set a maximum height */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    margin-top: 60px; /* Reduced margin-top */
+}
+
+
+.services-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container {
+    position: absolute;
+    top: -60px; /* Adjusted to move up */
+    left: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    background-color: #FFDA00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Increased z-index */
+}
+
+.icon-container i {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.services-card h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #333;
+    white-space: nowrap;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.services-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.services-card button {
+    background-color: transparent;
+    color: #0025ff;
+    border: 1px solid #0025ff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: auto; /* Push button to bottom */
+    max-width: 200px;
+    margin-left: 0; /* Align with other content */
+    margin-bottom: 20px;
+}
+
+.services-card button:hover {
+    background-color: #0025ff;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.services-card .icon-container {
+  background-color: #FFDA00;
+  transition: background-color 0.3s ease;
+}
+
+.services-card .icon-container svg {
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+.services-card:hover .icon-container {
+  background-color: #ffffff44;
+  border: 1px solid #000000;
+}
+
+.services-card:hover .icon-container i {
+  color: #000;
+}
+
+@media (max-width: 1200px) {
+    .services-cards {
+        max-width: 90%;
+        gap: 80px 20px; /* Adjusted gap for smaller screens */
+    }
+    .services-card {
+        width: calc(50% - 20px);
+        height: calc(50vw - 20px); /* Adjust height for 2 columns */
+        max-height: 450px; /* Increase max height for 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-card {
+        width: 100%;
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 400px; /* Set a minimum height */
+        padding: 80px 30px 30px; /* Adjusted padding */
+        margin-top: 80px; /* Increased margin-top for smaller screens */
+    }
+    
+    .icon-container {
+        top: -60px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .services-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .services-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Call-to-action button styles */
+.cta-container {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.cta-button {
+    padding: 20px 45px;
+    background-color: #FFDA00;
+    font-size: 22px;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0025ff;
+    color: #ffffff;
+}
+/* what we offer */
+.what-we-offer {
+  padding: 80px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.portrait-container {
+  width: 40%;
+  margin-right: 5%;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.content-container {
+  width: 55%;
+}
+
+.section-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.what-we-offer {
+  display: flex;
+  align-items: flex-start; /* Changed from center to flex-start to align at the top */
+  justify-content: space-between; /* Ensures even spacing between image and content */
+  padding: 40px 0; /* Added vertical padding for better spacing */
+}
